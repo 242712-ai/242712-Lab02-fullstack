@@ -1,114 +1,105 @@
-
-
-body {
-    font-family: Arial, sans-serif;
+/* Remove default spacing */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-
-/* =========================
-   Hero Section
-========================= */
-
-.hero-section {
-    background: #f4f6f8;
-    padding: 100px 20px;
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    padding: 40px;
 }
 
-.hero-section h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.hero-section p {
-    font-size: 20px;
+/* Main Heading */
+h1 {
+    text-align: center;
     margin-bottom: 30px;
 }
 
-
-/* =========================
-   About Section
-========================= */
-
-.about-box {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+/* Flexbox Container */
+.project-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-.about-box h3 {
+/* Project Card */
+.project-card {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    /* Transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Effect */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Image */
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+
+    /* CSS Filter */
+    filter: grayscale(100%);
+
+    /* Image Transition */
+    transition: filter 0.3s ease;
+}
+
+/* Remove Filter on Image Hover */
+.project-card img:hover {
+    filter: grayscale(0%);
+}
+
+/* Project Title */
+.project-card h2 {
+    margin: 15px 0 10px;
+}
+
+/* Description */
+.project-card p {
+    color: #555;
+    line-height: 1.5;
     margin-bottom: 20px;
 }
 
-.about-box li {
-    margin-bottom: 10px;
-}
-
-
-/* =========================
-   Courses Section
-========================= */
-
-.courses-section {
-    background: #f5f5f5;
-}
-
-.card {
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card-title {
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-
-/* =========================
-   Contact Section
-========================= */
-
-#contact {
-    background: white;
-}
-
-
-/* =========================
-   Footer
-========================= */
-
-.footer {
-    background: #212529;
+/* Button */
+.project-card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
     color: white;
-    padding: 20px 0;
+    cursor: pointer;
 }
 
-.footer p {
-    margin: 0;
+/* Button Hover */
+.project-card button:hover {
+    background-color: #555;
 }
 
+/* Mobile Responsive */
+@media (max-width: 700px) {
 
-/* =========================
-   Responsive Design
-========================= */
-
-@media (max-width: 768px) {
-
-    .hero-section {
-        padding: 60px 20px;
+    .project-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero-section h1 {
-        font-size: 35px;
-    }
-
-    .hero-section p {
-        font-size: 17px;
+    .project-card {
+        width: 90%;
     }
 }
