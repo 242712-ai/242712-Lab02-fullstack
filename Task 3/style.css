@@ -1,0 +1,61 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Card */
+.card {
+    width: 450px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px gray;
+
+    /* Required */
+    position: relative;
+}
+
+/* Featured Badge */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    background-color: orange;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Heading */
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* Description */
+.card p {
+    line-height: 1.5;
+}
+
+/* Date */
+.date {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Pseudo-element */
+.card h3::before {
+    content: "★ ";
+    color: orange;
+}
